@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_POSAR02" targetNamespace="http://tempuri.org/DS_POSAR02.xsd" xmlns:mstns="http://tempuri.org/DS_POSAR02.xsd" xmlns="http://tempuri.org/DS_POSAR02.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RESLeaderConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RESLeaderConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.COSMOS_RES.Properties.Settings.GlobalReference.Default.RESLeaderConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="POSXATableAdapter" GeneratorDataComponentClassName="POSXATableAdapter" Name="POSXA" UserDataComponentName="POSXATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RESLeaderConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT XA001,XI002,XA002,XA003,XA004,XA005,XA006,XA007,XA008,
+	   XB002,XL003,XB003,XB004,XB005
+	   
+
+FROM POSXA 
+LEFT JOIN POSXB ON XA001=XB001
+LEFT JOIN POSXI ON XI001=XA002
+LEFT JOIN POSXL ON XA002=XL001 AND XB007=XL002
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="XA001" DataSetColumn="XA001" />
+              <Mapping SourceColumn="XA002" DataSetColumn="XA002" />
+              <Mapping SourceColumn="XA003" DataSetColumn="XA003" />
+              <Mapping SourceColumn="XA004" DataSetColumn="XA004" />
+              <Mapping SourceColumn="XA005" DataSetColumn="XA005" />
+              <Mapping SourceColumn="XA006" DataSetColumn="XA006" />
+              <Mapping SourceColumn="XA007" DataSetColumn="XA007" />
+              <Mapping SourceColumn="XA008" DataSetColumn="XA008" />
+              <Mapping SourceColumn="XI002" DataSetColumn="XI002" />
+              <Mapping SourceColumn="XB002" DataSetColumn="XB002" />
+              <Mapping SourceColumn="XL003" DataSetColumn="XL003" />
+              <Mapping SourceColumn="XB003" DataSetColumn="XB003" />
+              <Mapping SourceColumn="XB004" DataSetColumn="XB004" />
+              <Mapping SourceColumn="XB005" DataSetColumn="XB005" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_POSAR02" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DS_POSAR02" msprop:Generator_UserDSName="DS_POSAR02">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="POSXA" msprop:Generator_TableClassName="POSXADataTable" msprop:Generator_TableVarName="tablePOSXA" msprop:Generator_TablePropName="POSXA" msprop:Generator_RowDeletingName="POSXARowDeleting" msprop:Generator_RowChangingName="POSXARowChanging" msprop:Generator_RowEvHandlerName="POSXARowChangeEventHandler" msprop:Generator_RowDeletedName="POSXARowDeleted" msprop:Generator_UserTableName="POSXA" msprop:Generator_RowChangedName="POSXARowChanged" msprop:Generator_RowEvArgName="POSXARowChangeEvent" msprop:Generator_RowClassName="POSXARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="XA001" msdata:Caption="店家編號" msprop:Generator_ColumnVarNameInTable="columnXA001" msprop:Generator_ColumnPropNameInRow="XA001" msprop:Generator_ColumnPropNameInTable="XA001Column" msprop:Generator_UserColumnName="XA001">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA002" msdata:Caption="店家類別" msprop:Generator_ColumnVarNameInTable="columnXA002" msprop:Generator_ColumnPropNameInRow="XA002" msprop:Generator_ColumnPropNameInTable="XA002Column" msprop:Generator_UserColumnName="XA002" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA003" msdata:Caption="店家名稱" msprop:Generator_ColumnVarNameInTable="columnXA003" msprop:Generator_ColumnPropNameInRow="XA003" msprop:Generator_ColumnPropNameInTable="XA003Column" msprop:Generator_UserColumnName="XA003" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA004" msdata:Caption="店家電話一" msprop:Generator_ColumnVarNameInTable="columnXA004" msprop:Generator_ColumnPropNameInRow="XA004" msprop:Generator_ColumnPropNameInTable="XA004Column" msprop:Generator_UserColumnName="XA004" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA005" msdata:Caption="店家電話二" msprop:Generator_ColumnVarNameInTable="columnXA005" msprop:Generator_ColumnPropNameInRow="XA005" msprop:Generator_ColumnPropNameInTable="XA005Column" msprop:Generator_UserColumnName="XA005" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA006" msdata:Caption="店家地址" msprop:Generator_ColumnVarNameInTable="columnXA006" msprop:Generator_ColumnPropNameInRow="XA006" msprop:Generator_ColumnPropNameInTable="XA006Column" msprop:Generator_UserColumnName="XA006" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA007" msdata:Caption="營業時間" msprop:Generator_ColumnVarNameInTable="columnXA007" msprop:Generator_ColumnPropNameInRow="XA007" msprop:Generator_ColumnPropNameInTable="XA007Column" msprop:Generator_UserColumnName="XA007" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XA008" msdata:Caption="店家備註" msprop:Generator_ColumnVarNameInTable="columnXA008" msprop:Generator_ColumnPropNameInRow="XA008" msprop:Generator_ColumnPropNameInTable="XA008Column" msprop:Generator_UserColumnName="XA008" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XI002" msdata:Caption="店家類別名稱" msprop:Generator_ColumnVarNameInTable="columnXI002" msprop:Generator_ColumnPropNameInRow="XI002" msprop:Generator_ColumnPropNameInTable="XI002Column" msprop:Generator_UserColumnName="XI002" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XB002" msdata:Caption="菜色編號" msprop:Generator_ColumnVarNameInTable="columnXB002" msprop:Generator_ColumnPropNameInRow="XB002" msprop:Generator_ColumnPropNameInTable="XB002Column" msprop:Generator_UserColumnName="XB002" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XL003" msdata:Caption="菜色類別名稱" msprop:Generator_ColumnVarNameInTable="columnXL003" msprop:Generator_ColumnPropNameInRow="XL003" msprop:Generator_ColumnPropNameInTable="XL003Column" msprop:Generator_UserColumnName="XL003" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XB003" msdata:Caption="菜色名稱" msprop:Generator_ColumnVarNameInTable="columnXB003" msprop:Generator_ColumnPropNameInRow="XB003" msprop:Generator_ColumnPropNameInTable="XB003Column" msprop:Generator_UserColumnName="XB003" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XB004" msdata:Caption="價格" msprop:Generator_ColumnVarNameInTable="columnXB004" msprop:Generator_ColumnPropNameInRow="XB004" msprop:Generator_ColumnPropNameInTable="XB004Column" msprop:Generator_UserColumnName="XB004" type="xs:decimal" minOccurs="0" />
+              <xs:element name="XB005" msdata:Caption="菜單備註" msprop:Generator_ColumnVarNameInTable="columnXB005" msprop:Generator_ColumnPropNameInRow="XB005" msprop:Generator_ColumnPropNameInTable="XB005Column" msprop:Generator_UserColumnName="XB005" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:POSXA" />
+      <xs:field xpath="mstns:XA001" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
